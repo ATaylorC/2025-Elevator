@@ -27,9 +27,8 @@ mech_data = {
 MECH = namedtuple("Data", mech_data.keys())(**mech_data)
 
 # Electrical constants, e.g. current limits, CAN bus IDs, RoboRIO port numbers
-elec_data = { 
-    "elevator_speed": 0.4, 
-} 
+elec_data = {
+}
 ELEC = namedtuple("Data", elec_data.keys())(**elec_data)
 
 # Operation constants, e.g. preferred brake mode, which joystick to use

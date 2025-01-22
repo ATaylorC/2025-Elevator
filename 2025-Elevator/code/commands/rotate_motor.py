@@ -19,7 +19,7 @@ logger = logging.getLogger("aniyah")
 
 
 class lift(commands2.Command):
-    def __init__(self, motor_sub:ElevatorSubsystem ) -> None:
+    def __init__(self, motor_sub: ElevatorSubsystem ) -> None:
         super().__init__()
         self.motor = motor_sub
 

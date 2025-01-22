@@ -12,7 +12,7 @@ class ElevatorSubsystem(commands2.Subsystem):
         self.controller = wpilib.XboxController
 
     def move(self, speed):
-        self.motor.set(0.4*speed)
+        self.motor.set(ELEC.elevator_speed*speed)
     
     def stop(self):
         self.motor.set(0)
