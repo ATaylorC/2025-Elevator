@@ -13,14 +13,14 @@ import commands2.button
 
 
 from constants import OP, SW
-import Subsystem.motor_sub
-from Commands.rotate_motor import lift, lower, StopMotor, UpdateEncoder
+import subsystems.motor_sub
+from commands.rotate_motor import lift, lower, StopMotor, UpdateEncoder
 
 
 class RobotContainer:
 
     def __init__(self):
-        self.motor_sub = Subsystem.motor_sub.ElevatorSubsystem()
+        self.motor_sub = subsystems.motor_sub.ElevatorSubsystem()
 
         self.stick = commands2.button.CommandXboxController(OP.joystick_port)
 
