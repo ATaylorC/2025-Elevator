@@ -14,7 +14,7 @@ import commands2.button
 
 from constants import OP, SW
 import subsystems.motor_sub
-from commands.rotate_motor import lift, lower, StopMotor, UpdateEncoder
+from commands.rotate_motor import lift, lower, StopMotor, UpdateEncoder, ElevatorTeleop
 
 
 class RobotContainer:
@@ -27,4 +27,7 @@ class RobotContainer:
         self.configureButtonBindings()
 
     def configureButtonBindings(self):
-        self.motor_sub.setDefaultCommand()
+        self.motor_sub.setDefaultCommand(ElevatorTeleop(self.motor_sub, self.stick))
+
+    def getAutonomousCommand(self):
+        return None

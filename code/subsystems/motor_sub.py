@@ -8,7 +8,7 @@ from constants import ELEC
 class ElevatorSubsystem(commands2.Subsystem):
     def __init__(self):
         super().__init__()
-        self.motor = phoenix6.hardware.TalonFX(ELEC.motor_CAN_ID)
+        self.motor = phoenix6.hardware.TalonFX(ELEC.elevator_motor_CAN_ID)
         self.controller = wpilib.XboxController
 
     def move(self, speed):
